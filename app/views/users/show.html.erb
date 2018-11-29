@@ -1,0 +1,11 @@
+<p id="notice">
+    <%= notice %>
+</p>
+
+<p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+</p>
+
+<%= link_to t(:show), edit_user_path(@user), class: 'btn btn-outline-secondary' %> |
+<%= link_to t(:back), users_path,class: 'btn btn-outline-secondary' %>

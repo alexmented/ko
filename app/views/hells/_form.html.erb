@@ -1,0 +1,34 @@
+<%= form_with(model: hell, local: true) do |form| %>
+  <% if hell.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hell.errors.count, "error") %> prohibited this hell from being saved:</h2>
+
+      <ul>
+      <% hell.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div style="font-weight:bold" class="field" type="password">
+      <%= form.label t(:topic) %>:
+      <%= form.text_field :top, id: :task_top %>
+    </div>
+
+    <div style="font-weight:bold" class="field" type="password">
+      <%= form.label t(:task) %>:
+      <%= form.text_field :tas, id: :task_tas %>
+    </div>
+    <div style="font-weight:bold" class="field" type="password">
+      <%= form.label t(:status)%>:
+      <span style="font-weight:normal"><%=t :done%><%= form.radio_button :stat, "Done" %></span>
+      <span style="font-weight:normal"><%=t :notDone%><%= form.radio_button :stat, "Not Done", checked:"checked" %></span>
+    </div>
+
+    
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

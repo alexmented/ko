@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+    <strong><%= t :topic %></strong>
+    <%= @hell.top %>
+</p>
+<p>
+    <strong><%= t :task %></strong>
+    <%= @hell.tas %>
+</p>
+<p>
+    <strong><%= t :status %></strong>
+    <%= @hell.stat %>
+</p>
+
+<%= link_to t(:edit), edit_hell_path(@hell) %> |
+<%= link_to t(:back), hells_path %>

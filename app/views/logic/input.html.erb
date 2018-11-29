@@ -1,0 +1,12 @@
+<h1>Форма ввода</h1>
+
+
+<%= form_tag('/logic/output', :method => 'get') do %>
+
+    <!--<%= label_tag('Введите N') %> <br> -->
+    <div class="form-row">
+    <h3><%=text_field_tag(:param, nil, placeholder: 'введите количество разрядов', class: 'form-control col') %> </h3>
+    </div>
+    <h3><%=submit_tag('Calculate', class: 'btn btn-primary')%> </h3>
+
+<%end%>

@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ footer {
+    height: 60px;
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    color:white;
+    }
+
+.eng {
+    color:red
+}
+
+a:hover {
+  color:red  
+}
+.email {
+    padding-left: 20px;
+}
+.bold {
+    font-weight: bold;
+}
+.picture {
+    background-image: url(blocknot.png);
+    position:absolute;
+    width:422px;
+    height:392px;
+    position:absolute;
+    left: 70%;
+    top: 10%;
+    font-size: 1px;
+    }
+
+.date {
+   padding-right: 5px;
+   color:white
+}
+
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    background: white;
+    max-width: 70%;
+    width: 70%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  th {
+    font-weight: normal;
+    color: #039;
+    padding: 10px 15px;
+  }
+  td {
+    color: #669;
+    border-top: 1px solid #e8edff;
+    padding: 10px 15px;
+  }
+  tr:hover td {background: #e8edff;}
+
+  div > a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: green;
+    border-radius: 3px;
+}
+
+
+.t > a {
+    color: white;
+    text-decoration: none;
+    background-color: #28A745;
+}

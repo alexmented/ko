@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+<div class="email"><%=  t :welocme%>,<%=current_user[:email] %></div>
+<h1><%=t :Tasks%></h1>
+
+<table class="table_dark">
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+  <th><%=t :topic%></th>
+  <th><%=t :task%></th>
+  <th><%=t :status%></th>
+  <th><%=t :dateCreate%></th>
+  </tr>
+    <% @hells.each do |hell| %>
+    <% if current_user[:id] == hell.user_id %>
+      <tr>
+      <td><%= hell.top %></td>
+      <td style="width:200px"><%= hell.tas %></td>
+      <td class="stat"><%= hell.stat %></td>
+      <td><%= hell.created_at.strftime("%d-%m-%Y") %></td>
+        <td class="no"><%= link_to t(:show), hell %></td>
+        <td class="no"><%= link_to t(:edit), edit_hell_path(hell) %></td>
+        <td><%= link_to t(:delete), hell, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+<%= link_to t(:newTask), new_hell_path %>
+
+<script>
+var stat=document.getElementsByClassName("stat");
+for (let i = 0; i < stat.length; i++) {
+  if (stat[i].textContent == "Done") {
+    stat[i].style.color = "green"
+  }
+  else {
+    stat[i].style.color = "red"
+  }
+}
+</script>
